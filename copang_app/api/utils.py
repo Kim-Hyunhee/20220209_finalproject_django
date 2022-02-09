@@ -2,6 +2,7 @@ import jwt
 import my_custom_settings
 
 from copang_app.models import Users
+from copang_app.global_data import token_user
 from functools import wraps
 
 from rest_framework.response import Response
@@ -47,12 +48,13 @@ def token_required(func):
     @wraps(func)
     def decorator(*args, **kwargs):
         
+        request = args[1]
         token =  args[1].headers['X-Http-Token']
         user = decode_token(token)
         
         if user:
-            # 프로젝트 전역 변수로 사용자 전달
-            
+            # 요청의 세션에 사용자 기록
+            request.session['user_id'] = user.id      
             # 추가 행동을 하고나면 본 함수를 실행하게 처리
             return func(*args, **kwargs)
         else:
