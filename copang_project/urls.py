@@ -28,7 +28,7 @@ schema_view = get_schema_view(
         title='Copang API 명세',
         default_version='v1',
         description='빅데이터 파이썬 최종 프로젝트를 장고로 컨버팅 합니다.',
-        terms_of_service="https://nepplus.com",
+        terms_of_service="https://neppplus.com",
         contact=openapi.Contact(name='Tester', email='test@test.com'),
         license=openapi.License(name='Test License')
     ),

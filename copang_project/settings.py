@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-05gpzcroi(931gt)gv587$#8c&b=cfhk)=!596vlu*n5=53&u_'
+SECRET_KEY = 'django-insecure-_31ino+2s*m+v-)nwh5&l^j&q)tyo4u(su3$(yvey%$df(rv8i'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'copang_app',
     'rest_framework',
-    'drf_yasg'
+    'drf_yasg',
 ]
 
 APPEND_SLASH = False
